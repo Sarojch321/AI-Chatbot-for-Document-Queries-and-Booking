@@ -198,7 +198,10 @@ def main():
     if 'conversation_history' not in st.session_state:
         st.session_state.conversation_history = []
 
-    api_key = "AIzaSyDfVcC3CMxhdV9-k_wp52khfFHbrVNU6bc"
+    api_key = st.text_input("Enter your Google API Key", type="password")
+
+    if api_key is None:
+        return
 
 
     pdf_docs = st.file_uploader("Upload your PDF files", accept_multiple_files=True)
