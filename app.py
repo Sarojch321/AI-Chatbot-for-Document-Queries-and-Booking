@@ -78,7 +78,7 @@ def get_chunks(text):
     return splitter.split_text(text)
 
 def get_vectors_store(text_chunks, api_key):
-    print(f"Number of text chunks: {len(text_chunks)}")
+    # print(f"Number of text chunks: {len(text_chunks)}")
     try:
         asyncio.get_running_loop()
     except RuntimeError:
